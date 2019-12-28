@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.thunisoft</groupId>
+	<artifactId>bamboo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>bamboo</name>
+	<description>Artery6 Project</description>
+
+	<properties>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<!--解析HTML-->
+		<dependency>
+		    <groupId>org.jsoup</groupId>
+		    <artifactId>jsoup</artifactId>
+		    <version>1.11.3</version>
+		</dependency>
+        <dependency>
+		    <groupId>org.wso2.apache.httpcomponents</groupId>
+		    <artifactId>httpclient</artifactId>
+		    <version>4.3.1.wso2v1</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>fastjson</artifactId>
+		    <version>1.2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.thunisoft.artery</groupId>
+			<artifactId>artery-code-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.thunisoft.artery</groupId>
+			<artifactId>artery-codeweb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.thunisoft.artery</groupId>
+			<artifactId>artery-login-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.thunisoft.artery</groupId>
+			<artifactId>artery-organ-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.thunisoft.artery</groupId>
+			<artifactId>artery-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.thunisoft.arterybase</groupId>
+			<artifactId>ArteryBase</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.swagger/swagger-annotations -->
+		<dependency>
+		    <groupId>io.swagger</groupId>
+		    <artifactId>swagger-annotations</artifactId>
+		    <version>1.5.22</version>
+		</dependency>
+		<!-- log4jdbc -->
+		<dependency>
+			<groupId>com.thunisoft</groupId>
+			<artifactId>thunisoft-log4jdbc-log4j2</artifactId>
+			<version>1.17.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.thunisoft</groupId>
+			<artifactId>thunisoft-logback</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.thunisoft.tap</groupId>
+			<artifactId>artery-uim-sdk-starter</artifactId>
+			<version>tap-2.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.thunisoft.tap</groupId>
+			<artifactId>msg-client</artifactId>
+			<version>tap-2.5.0-M1</version>
+		</dependency>
+	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.thunisoft.artery</groupId>
+				<artifactId>artery-parent</artifactId>
+				<version>6.0.45</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

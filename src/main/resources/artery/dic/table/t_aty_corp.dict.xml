@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table ver="2">
+  <cid>805c708d9dcb8c35feb95046f1e080db</cid>
+  <key>dbatytatycorp</key>
+  <tableName>t_aty_corp</tableName>
+  <showName>单位</showName>
+  <desc />
+  <submitName>atyCorp</submitName>
+  <fields>
+    <field id="133fe01c06c034284e03ccce06a0db7c" fieldName="c_id" fieldType="text" dbmsType="varchar" pk="true" defaultValue="" unique="true">
+      <extend label="标识" submitName="id" comment="VarChar" required="true" maxLength="50" editor="input" />
+    </field>
+    <field id="3d857a6431d8baee08cce9797772f74c" fieldName="c_name" fieldType="text" dbmsType="varchar" pk="false" defaultValue="" unique="false">
+      <extend label="单位名称" submitName="name" comment="VarChar" required="true" maxLength="300" editor="input" />
+    </field>
+    <field id="f6b38040fc7a1cbb8304c9e779471db8" fieldName="c_pid" fieldType="text" dbmsType="varchar" pk="false" defaultValue="" unique="false">
+      <extend label="父代码" submitName="pid" comment="VarChar" required="false" maxLength="300" editor="input" />
+    </field>
+    <field id="c12091127d4e2a098b4098bfeead6caf" fieldName="n_level" fieldType="number" dbmsType="int" pk="false" defaultValue="4" unique="false">
+      <extend label="单位层级" submitName="level" comment="Integer" required="true" valueUnit="无" maxPrecision="0" />
+    </field>
+    <field id="16d870a560201a1f42ab6aea0eccc57b" fieldName="c_gbm" fieldType="text" dbmsType="varchar" pk="false" defaultValue="" unique="false">
+      <extend label="国标码" submitName="gbm" comment="VarChar" required="false" maxLength="300" editor="input" />
+    </field>
+    <field id="b67fa3205d07e9953fc1b089afe06def" fieldName="c_alias" fieldType="text" dbmsType="varchar" pk="false" defaultValue="" unique="false">
+      <extend label="简称" submitName="alias" comment="VarChar" required="false" maxLength="300" editor="input" />
+    </field>
+    <field id="8a2b1a0fcb6916aa8b1e8d009b895c39" fieldName="n_valid" fieldType="number" dbmsType="int" pk="false" defaultValue="1" unique="false">
+      <extend label="是否有效" submitName="valid" comment="Integer" required="true" valueUnit="无" maxPrecision="0" />
+    </field>
+    <field id="77a6d3423f531423d65acded25b6bb16" fieldName="n_order" fieldType="number" dbmsType="int" pk="false" defaultValue="1" unique="false">
+      <extend label="显示顺序" submitName="order" comment="Integer" required="true" valueUnit="无" maxPrecision="0" />
+    </field>
+  </fields>
+</table>
+

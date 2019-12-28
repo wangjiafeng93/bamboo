@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table ver="2">
+  <cid>abbf4ee85d90ce1137626ec2608932ac</cid>
+  <key>dbatytatyrole</key>
+  <tableName>t_aty_role</tableName>
+  <showName>角色</showName>
+  <desc />
+  <submitName>atyRole</submitName>
+  <fields>
+    <field id="84413c23cda7352e184ff8c0cb97ba90" fieldName="c_id" fieldType="text" dbmsType="varchar" pk="true" defaultValue="" unique="true">
+      <extend label="ID" submitName="id" comment="VarChar" required="true" maxLength="50" editor="input" />
+    </field>
+    <field id="0bae5a50df744cde0a7811aad0b8c795" fieldName="c_name" fieldType="text" dbmsType="varchar" pk="false" defaultValue="" unique="false">
+      <extend label="角色名称" submitName="name" comment="VarChar" required="true" maxLength="300" editor="input" />
+    </field>
+    <field id="f1b91d53abe3b7ff177a2c32242c5738" fieldName="c_descript" fieldType="text" dbmsType="varchar" pk="false" defaultValue="" unique="false">
+      <extend label="描述" submitName="descript" comment="VarChar" required="false" maxLength="300" editor="input" />
+    </field>
+    <field id="a2bad1e30b7f2970e4fc8b44e221a062" fieldName="n_xtgy" fieldType="number" dbmsType="int" pk="false" defaultValue="2" unique="false">
+      <extend label="系统固有" submitName="xtgy" comment="Integer" required="false" valueUnit="无" maxPrecision="0" />
+    </field>
+    <field id="fb00ac22960d1e21baba974a3b847a9e" fieldName="n_valid" fieldType="number" dbmsType="int" pk="false" defaultValue="1" unique="false">
+      <extend label="是否有效" submitName="valid" comment="Integer" required="false" valueUnit="无" maxPrecision="0" />
+    </field>
+    <field id="a0d00a148567c4a2f11eca9ecb909da2" fieldName="n_order" fieldType="number" dbmsType="int" pk="false" defaultValue="1" unique="false">
+      <extend label="显示顺序" submitName="order" comment="Integer" required="false" valueUnit="无" maxPrecision="0" />
+    </field>
+  </fields>
+</table>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table ver="2">
+  <cid>166f2caef3565d4c7e51d78655576929</cid>
+  <key>dbatytatyright</key>
+  <tableName>t_aty_right</tableName>
+  <showName>权限</showName>
+  <desc />
+  <submitName>atyRight</submitName>
+  <fields>
+    <field id="ffbc3f2b8c810782978080007655c9a4" fieldName="c_rightkey" fieldType="text" dbmsType="varchar" pk="true" defaultValue="" unique="true">
+      <extend label="权限字" submitName="rightkey" comment="VarChar" required="true" maxLength="150" editor="input" />
+    </field>
+    <field id="51dc0a8eb9aa375e2335a09205c90b23" fieldName="c_name" fieldType="text" dbmsType="varchar" pk="false" defaultValue="" unique="false">
+      <extend label="权限名称" submitName="name" comment="VarChar" required="true" maxLength="300" editor="input" />
+    </field>
+    <field id="5c0a8537843088417251b91e4c8f8cf0" fieldName="c_descript" fieldType="text" dbmsType="varchar" pk="false" defaultValue="" unique="false">
+      <extend label="描述" submitName="descript" comment="VarChar" required="false" maxLength="300" editor="input" />
+    </field>
+    <field id="c85b7cb348bcc195cbc51f181466503d" fieldName="n_order" fieldType="number" dbmsType="int" pk="false" defaultValue="" unique="false">
+      <extend label="显示顺序" submitName="order" comment="Integer" required="false" valueUnit="无" maxPrecision="0" />
+    </field>
+  </fields>
+</table>
+

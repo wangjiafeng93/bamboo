@@ -1,0 +1,55 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:aty="http://www.thunisoft.com">
+ <head> 
+  <meta type="aty-meta" name="javaLocation" content="com.thunisoft.bamboo.book.controller.EgBookListController.java" th:remove="all"> 
+  <meta type="aty-meta" name="cssLocation" content="css/book/egBookList.css" th:remove="all"> 
+  <meta type="aty-meta" name="jsLocation" content="js/book/egBookList.js" th:remove="all"> 
+  <meta type="aty-meta" name="relation-table" content="dbatytegbook.t_eg_book" th:remove="all"> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"> 
+  <link rel="stylesheet" th:href="@{/webjars/artery/artery-ui.css}"> 
+  <link rel="stylesheet" aty:import> 
+  <link rel="stylesheet" th:href="@{/css/book/egBookList.css}"> 
+  <title>图书列表</title> 
+  <base th:href="@{/}"> 
+ </head> 
+ <body> 
+  <div id="app" style="height:100%;width:100%"> 
+   <aty-button text="增加" @click="addEgBook"></aty-button> 
+   <aty-table ref="table_egBook" @load-data="loadData" :limit="10" :pageable-data="rs" exp-file-name="图书列表" exp-title="图书列表"> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.c_name" filter-type="string" sortable></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.c_auth" filter-type="string" sortable></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.d_publisher" filter-type="string" sortable></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.f_price"></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.d_buy" filter-type="string" sortable></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.c_libraryid"></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.c_isbn"></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.c_version"></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.i_photo"></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.t_abst"></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.n_valid"></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.t_invalidreason"></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.n_type"></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.i_attach"></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.d_booking"></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.n_bookinguserid"></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.n_lenduserid"></aty-table-column> 
+    <aty-table-column aty:dict="dbatytegbook.t_eg_book.d_lend"></aty-table-column> 
+    <aty-table-column label="操作" :width="130"> 
+     <template slot-scope="props"> 
+      <aty-link text="编辑" @click="editEgBook(props.row.id)"></aty-link> 
+      <aty-link text="删除" @click="deleteEgBook(props.row.id)"></aty-link> 
+      <aty-link text="查看" @click="egBookDetail(props.row.id)"></aty-link> 
+     </template> 
+    </aty-table-column> 
+   </aty-table> 
+   <aty-modal ref="egBookWidiow" width="500" :footer-hide="true"> 
+    <aty-iframe height="520px" :src="popUrl" style="padding-top: 30px;" name="egBookFrame"></aty-iframe> 
+   </aty-modal> 
+  </div> 
+  <script type="text/javascript" th:src="@{/webjars/vue/vue.min.js}"></script> 
+  <script type="text/javascript" th:src="@{/webjars/artery/artery-ui.min.js}"></script> 
+  <script type="text/javascript" aty:import></script> 
+  <script type="text/javascript" th:src="@{/js/book/egBookList.js}"></script>  
+ </body>
+</html>

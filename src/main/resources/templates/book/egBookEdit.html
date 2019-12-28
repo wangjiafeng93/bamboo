@@ -1,0 +1,50 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:aty="http://www.thunisoft.com">
+ <head> 
+  <meta type="aty-meta" name="javaLocation" content="com.thunisoft.bamboo.book.controller.EgBookEditController.java" th:remove="all"> 
+  <meta type="aty-meta" name="cssLocation" content="css/book/egBookEdit.css" th:remove="all"> 
+  <meta type="aty-meta" name="jsLocation" content="js/book/egBookEdit.js" th:remove="all"> 
+  <meta type="aty-meta" name="relation-table" content="dbatytegbook.t_eg_book" th:remove="all"> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"> 
+  <link rel="stylesheet" th:href="@{/webjars/artery/artery-ui.css}"> 
+  <link rel="stylesheet" aty:import> 
+  <link rel="stylesheet" th:href="@{/css/book/egBookEdit.css}"> 
+  <title>图书编辑</title> 
+  <base th:href="@{/}"> 
+ </head> 
+ <body> 
+  <div id="app" style="height:100%;width:100%"> 
+   <aty-form :data="rs" ref="form"> 
+    <aty-input aty:dict="dbatytegbook.t_eg_book.c_id"></aty-input> 
+    <aty-input aty:dict="dbatytegbook.t_eg_book.c_name"></aty-input> 
+    <aty-input aty:dict="dbatytegbook.t_eg_book.c_auth"></aty-input> 
+    <aty-date-picker aty:dict="dbatytegbook.t_eg_book.d_publisher"></aty-date-picker> 
+    <aty-input-number aty:dict="dbatytegbook.t_eg_book.f_price"></aty-input-number> 
+    <aty-date-picker aty:dict="dbatytegbook.t_eg_book.d_buy"></aty-date-picker> 
+    <aty-input aty:dict="dbatytegbook.t_eg_book.c_libraryid"></aty-input> 
+    <aty-input aty:dict="dbatytegbook.t_eg_book.c_isbn"></aty-input> 
+    <aty-input aty:dict="dbatytegbook.t_eg_book.c_version"></aty-input> 
+    <aty-input aty:dict="dbatytegbook.t_eg_book.i_photo"></aty-input> 
+    <aty-textarea aty:dict="dbatytegbook.t_eg_book.t_abst"></aty-textarea> 
+    <aty-select aty:dict="dbatytegbook.t_eg_book.n_valid"></aty-select> 
+    <aty-textarea aty:dict="dbatytegbook.t_eg_book.t_invalidreason"></aty-textarea> 
+    <aty-select aty:dict="dbatytegbook.t_eg_book.n_type"></aty-select> 
+    <aty-input aty:dict="dbatytegbook.t_eg_book.i_attach"></aty-input> 
+    <aty-date-picker aty:dict="dbatytegbook.t_eg_book.d_booking"></aty-date-picker> 
+    <aty-input-number aty:dict="dbatytegbook.t_eg_book.n_bookinguserid"></aty-input-number> 
+    <aty-input-number aty:dict="dbatytegbook.t_eg_book.n_lenduserid"></aty-input-number> 
+    <aty-date-picker aty:dict="dbatytegbook.t_eg_book.d_lend"></aty-date-picker> 
+   </aty-form> 
+   <aty-button :text="!rs || !rs.id?'保存':'更新'" @click="submit"></aty-button> 
+  </div> 
+  <script type="text/javascript" th:src="@{/webjars/vue/vue.min.js}"></script> 
+  <script type="text/javascript" th:src="@{/webjars/artery/artery-ui.min.js}"></script> 
+  <script type="text/javascript" aty:import></script> 
+  <script th:inline="javascript">
+      var rs = Artery.resolveObj(/*[[${rs}]]*/);
+      rs = rs?rs : {}; 
+    </script> 
+  <script type="text/javascript" th:src="@{/js/book/egBookEdit.js}"></script>  
+ </body>
+</html>

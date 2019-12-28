@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:aty="http://www.thunisoft.com">
+  <head>
+    <meta type="aty-meta" name="javaLocation" content="com.thunisoft.bamboo.controller.jcyMap.MobanController.java" th:remove="all">
+    <meta type="aty-meta" name="cssLocation" content="css/jcyMap/moban.css" th:remove="all"> 
+    <meta type="aty-meta" name="jsLocation" content="js/jcyMap/moban.tpl.js" th:remove="all">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="stylesheet" th:href="@{/webjars/artery/artery-ui.css}" />
+    <link rel="stylesheet" aty:import>
+    <link rel="stylesheet" th:href="@{/css/jcyMap/moban.css}" />
+    <title>title</title>
+    <base th:href="@{/}" />
+  </head>
+  <body>
+    <div id="app" aty-tpl-container>
+      <aty-menu aty-tpl-node="851e96d546fc0487df9ae61c3cc38a61"></aty-menu>
+    </div>
+  </body>
+  <script type="text/javascript" th:src="@{/webjars/vue/vue.min.js}"></script>
+  <script type="text/javascript" th:src="@{/webjars/artery/artery-ui.min.js}"></script>
+  <script type="text/javascript" aty:import></script>
+  <script type="text/javascript" th:src="@{/js/jcyMap/moban.tpl.js}"></script>
+  <script type="text/javascript">
+    /* 模板表单初始化用，为了使模板表单也可以预览 */
+    atyTplMixin.el = '#app';
+    var vm = new Vue(atyTplMixin);
+  </script>
+</html>

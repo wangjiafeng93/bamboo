@@ -1,0 +1,1 @@
+2019-06-12 14:29:45 [ERROR] [main ] c.a.d.p.DruidDataSource - testWhileIdle is true, validationQuery not set
