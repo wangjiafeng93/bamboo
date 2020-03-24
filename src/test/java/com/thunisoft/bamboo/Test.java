@@ -12,6 +12,7 @@ public class Test {
 	public static final Test INSTANCE = new Test();
 	public static final Test INSTANCE1 = new Test();
 	private Test() {
+		System.out.println("123");
 	}// 将构造函数定义为私有变量后，就不能在外部去调用构造函数实例化类了
 
 	public void sys() {
