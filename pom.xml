@@ -17,6 +17,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<storage.client.starter.version>2.2.0</storage.client.starter.version>
 	</properties>
 
 	<dependencies>
@@ -95,6 +96,24 @@
 			<groupId>com.thunisoft.tap</groupId>
 			<artifactId>msg-client</artifactId>
 			<version>tap-2.5.0-M1</version>
+		</dependency>
+		<!-- 存储client集成 -->
+		<dependency>
+			<groupId>com.thunisoft.cloud.storage</groupId>
+			<artifactId>storage-client-spring-boot-starter</artifactId>
+			<version>${storage.client.starter.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.thunisoft.cloud.storage</groupId>
+			<artifactId>storage-client-minio</artifactId>
+			<version>${storage.client.starter.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.thunisoft.cloud.storage</groupId>
+			<artifactId>storage-client-serverconfig</artifactId>
+			<version>${storage.client.starter.version}</version>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
