@@ -10,7 +10,7 @@ public class Test {
 
 	// 公有的静态域，来说明该类只能有一个实例（实例化一次后，后面都是同一个实例）
 	public static final Test INSTANCE = new Test();
-
+	public static final Test INSTANCE1 = new Test();
 	private Test() {
 	}// 将构造函数定义为私有变量后，就不能在外部去调用构造函数实例化类了
 
