@@ -22,6 +22,7 @@ public class Main {
 		HashMap h1 = new HashMap();
 		Hashtable h2 = new Hashtable();
 		ArrayList a1 = new ArrayList<>();
+
 		Vector a2 = new Vector();
 		s1.append("123");
 		s2.append("fd");
