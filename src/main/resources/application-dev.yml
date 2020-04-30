@@ -3,8 +3,8 @@ spring:
     cache: false
   datasource:
     name: dataSource
-    url: jdbc:ArteryBase://172.16.34.123:5432/abase?currentSchema=db_mf
+    url: jdbc:ArteryBase://172.16.193.220:5432/db_orchid
     username: sa
-    password: tusc@6789#JKL
+    password: ENCRYPT#g3J0wPwVx24eVe/lEupktA==
     #type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.thunisoft.ArteryBase.Driver

@@ -7,7 +7,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
 server:
-  port: 8888
+  port: 7060
 #  servlet:
 #    context-path: /demo
 #    session:
